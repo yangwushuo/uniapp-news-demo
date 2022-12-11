@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "个人",
+  "usingComponents": {
+    "new-box": "../../components/newBox/newBox"
+  }
+}

@@ -1,25 +1,59 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/demo/demo",
-			"style": {
-				"navigationBarTitleText": "这是一个demo",
-				"enablePullDownRefresh": false
-			}
 
-		},
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "新闻",
+				"onReachBottomDistance": 0,
+				"usingComponents": {
+					"van-popup": "/wxcomponents/vant/dist/popup/index"
+				}
 			}
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "个人"
+			}
+
+		}, {
+			"path": "pages/newsDetail/newsDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundTextStyle": "dark",
+		"backgroundColor": "#f3f3f5"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#ff7b00",
+		"backgroundColor": "#ffffff",
+		"fontSize": "18px",
+		"borderStyle": "white",
+		"blurEffect": "dark",
+		"iconfontSrc": "/static/icon/tabbar-icon/font/iconfont.ttf",
+		"height": "120rpx",
+		"spacing": "10rpx",
+		"list": [{
+				"text": "新闻",
+				"pagePath": "pages/index/index",
+				"iconPath": "static/icon/tabbar-icon/news.png",
+				"selectedIconPath": "static/icon/tabbar-icon/selectedNews.png"
+			},
+			{
+				"text": "我",
+				"pagePath": "pages/my/my",
+				"iconPath": "static/icon/tabbar-icon/my.png",
+				"selectedIconPath": "static/icon/tabbar-icon/selectedMy.png"
+			}
+		]
+	}
 }
